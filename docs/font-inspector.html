@@ -245,7 +245,7 @@ for(var i = tableHeaders.length; i--; ) {
         e.target.className = (e.target.className === 'collapsed') ? 'expanded' : 'collapsed';
     }, false);
 }
-
+const loadScript = (src) => new Promise((onload, onerror) => document.head.append(Object.assign(document.createElement('script'), {src, onload, onerror})));
 const form = document.forms.demo;
 async function display(file, name) {
     form.fontname.innerText = name;
